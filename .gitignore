@@ -1,0 +1,35 @@
+
+# Python bytecode & cache
+__pycache__/
+*.pyc
+
+# Python virtualenvs
+.virtualenvs/
+py37-karya/
+
+# python tests
+behave-report
+# swap files
+*.swp
+
+#pycharm prpject files
+.idea
+.vscode
+
+# log files
+*.tmp
+
+#egg-info files
+*.egg-info
+.eggs
+
+# build files and directories
+mobility_pkg
+mobility-*.tgz
+
+# local files
+*.freeze.txt
+capistrano.git
+
+# ignore users.txt since it must be synced by setup.py
+config/users.txt
