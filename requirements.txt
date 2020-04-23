@@ -1,1 +1,4 @@
+dotmap
+pyhocon
+
 -e ".[develop, doc, test]"

@@ -5,7 +5,6 @@ __pycache__/
 
 # Python virtualenvs
 .virtualenvs/
-py37-karya/
 
 # python tests
 behave-report
@@ -24,12 +23,8 @@ behave-report
 .eggs
 
 # build files and directories
-mobility_pkg
-mobility-*.tgz
 
 # local files
 *.freeze.txt
 capistrano.git
-
-# ignore users.txt since it must be synced by setup.py
-config/users.txt
+py37-pysaprk-labs/
