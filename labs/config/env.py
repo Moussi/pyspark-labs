@@ -12,7 +12,8 @@ class Env:
                 key = method(*args, **kwargs)
                 return os.environ[key]
             except KeyError:
-                raise MissingEnvKeyError(key=key)
+                return "local"
+                #raise MissingEnvKeyError(key=key)
 
         return wrapper
 

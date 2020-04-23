@@ -1,4 +1,5 @@
 dotmap
 pyhocon
+pyspark==2.4.3
 
 -e ".[develop, doc, test]"
