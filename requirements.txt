@@ -1,5 +1,6 @@
 dotmap
 pyhocon
 pyspark==2.4.3
+pyarrow
 
 -e ".[develop, doc, test]"

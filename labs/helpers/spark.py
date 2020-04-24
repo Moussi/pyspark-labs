@@ -2,6 +2,9 @@ from pyspark import SparkConf
 from pyspark.sql import SparkSession
 
 from labs.config import spark
+import labs.logging.logger as logging
+
+logger = logging.getLogger('labs.helpers.spark')
 
 
 class Session:
@@ -12,6 +15,7 @@ class Session:
         if spark_options:
             spark_conf.update(spark_options)
 
+        logger.info(f"{spark_conf}")
         spark_conf = SparkConf.setAll(spark_conf.items)
         self.session = SparkSession.Builder.appName(name).master(spark_conf["master"]).config(spark_conf).getOrCreate()
 
