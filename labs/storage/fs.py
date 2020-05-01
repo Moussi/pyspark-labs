@@ -1,5 +1,7 @@
 import functools
 import pathlib
+import shutil
+import os
 import pyarrow as pa
 from labs.config.env import Env
 from labs.config import labs
@@ -47,6 +49,14 @@ class LocalFS(FsContext):
     def __init__(self, config=None):
         self.config = config or self.config
 
+    @staticmethod
+    def delete(path, recursive=False):
+        path = pathlib.Path(path)
+        if recursive:
+            shutil.rmtree(path=path)
+        else:
+            path.rmdir() if not os.path.isfile(path) else path.unlink()
+
     def succeeded(self, path):
         path = '{path}/_SUCCESS'.format(path=path)
 
@@ -67,6 +77,9 @@ class Hdfs(FsContext):
         self.conn = pa.hdfs.connect(
             server.addr, port=port, user=server.user
         )
+
+    def delete(self, path, recursive=False):
+        self.conn.delete(path, recursive=recursive)
 
     def succeeded(self, path):
         path = '{path}/_SUCCESS'.format(path=path)

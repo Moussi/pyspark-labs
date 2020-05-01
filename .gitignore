@@ -28,3 +28,4 @@ behave-report
 *.freeze.txt
 capistrano.git
 py37-pysaprk-labs/
+venv/

@@ -16,8 +16,8 @@ class Session:
             spark_conf.update(spark_options)
 
         logger.info(f"{spark_conf}")
-        spark_conf = SparkConf.setAll(spark_conf.items)
-        self.session = SparkSession.Builder.appName(name).master(spark_conf["master"]).config(spark_conf).getOrCreate()
+        conf = SparkConf().setAll(spark_conf.items())
+        self.session = SparkSession.builder.appName(name).master(spark_conf["master"]).getOrCreate()
 
     def __enter__(self):
         return self.session
