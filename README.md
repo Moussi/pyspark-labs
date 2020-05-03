@@ -75,6 +75,9 @@ https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memo
 ## Caching and persistence data
 * cache() is equivalent to persist(MEMORY_ONLY)
 
+## Dataframes
+* inferSchema: spark will process input data and detect types
+* writing dataframes modes: error(default), append, overwrite
 
 ## env vars
 export SPARK_HOME=/path/to/spark
