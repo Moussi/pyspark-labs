@@ -2,5 +2,10 @@ dotmap
 pyhocon
 pyspark==2.4.3
 pyarrow
+pandas
+scipy
+matplotlib
+numpy
+beautifulsoup4
 
 -e ".[develop, doc, test]"
