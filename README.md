@@ -36,6 +36,12 @@ Reinstall package
 pip install -U -e .
 ````
 
+## Pycharm Debug
+Use the file built by setup tools in the bin folder of your virtual ennv
+Edit Configuration   
+scriptPath: /path/to/bin/built_consoles_script_file  
+arguments: def arguments 
+
 # PySpark
 ## Spark memory and executors optimization
 https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html
